@@ -20,7 +20,14 @@ Get Geolocation
 Get Weather Information
 Deploy to Github Pages
 
-#Using 
+#Packages 
 JavaScript
 HTML5
 Open Weather API
+localStorage
+AJAX
+JSON
+DOM
+fetch
+OpenWeather API
+
