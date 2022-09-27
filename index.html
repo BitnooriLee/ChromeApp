@@ -1,42 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" /> 
+    <link rel="stylesheet" href="css/style.css" />
     <title>Momentum App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+        crossorigin="anonymous">
 </head>
+
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <div class=container>
+        <div class="position-absolute top-50 start-50">
+
+            <h2 id="clock">00:00:00</h2>
+            <form id="login-form" class="hidden">
+                <input required maxlength="15" type="text" placeholder="What is your name?" />
+
+                <button type="button" class="btn-bd-primary">Log In</button>
+
+            </form>
+            <form id="todo-form">
+                <input type="text" placeholder="Write a To Do and Press Enter">
+            </form>
+            <ul id="todo-list">
+            </ul>
+            <h1 id="greeting" class="hidden"></h1>
+
+            <div id="quote" class="position-absolute top-10">
+                    <span></span>
+                    <span></span>
+                </div>
+
+        </div>
+ 
+        <div id="weather">
+            <span></span>
+            <span></span>
+        </div>
+
+        <script src="JS/greeting.js"></script>
+        <script src="JS/clock.js"></script>
+        <script src="JS/quote.js"></script>
+        <div>
+        <script src="JS/background.js"></script>
     
-    <form id="login-form" class="hidden">
-    <input required maxlength="15" type= "text" placeholder="What is your name?"/>
-    <button>Log In</button>
-    </form>
-    <form id="todo-form">
-            <input type="text" placeholder="Write a To Do and Press Enter">
-        </form>
-        <ul id="todo-list">
-        </ul>
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <div id="quote">
-        <span></span>
-        <span></span>
-    </div>
-    <div id="weather">
-        <span></span>
-        <span></span>
-    </div>
-
-    <script src="JS/greeting.js"></script>
-    <script src="JS/clock.js"></script>
-    <script src="JS/quote.js"></script>
-    <script src= "JS/background.js"></script>
-    <script src="JS/todo.js"></script>
-    <script src = "JS/weather.js"></script>
+        <script src="JS/todo.js"></script>
+       
+        <script src="JS/weather.js"></script>
+  
 </body>
+
 </html>
-
-
-
