@@ -34,9 +34,9 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 [![Gitter chat](https://img.shields.io/badge/chat-on_gitter-008080.svg?style=flat-square)](https://gitter.im/git-point)
 
-View repository and user information, control your notifications and even manage your issues and pull requests. Built with React Native, GitPoint is one of the most feature-rich unofficial GitHub clients that is 100% free.
 
-**Available for both iOS and Android.**
+
+**Available for any Webrowser.**
 
 <p align="center">
   <img src = "http://i.imgur.com/HowF6aM.png" width=350>
@@ -86,6 +86,9 @@ A few of the things you can do with ChromApp:
 
 ## Build Process
 
+- Please take a look at for access Weather API. you can get the API Key here. 
+
+
 - Follow the [React Native Guide](https://facebook.github.io/react-native/docs/getting-started.html) for getting started building a project with native code. **A Mac is required if you wish to develop for iOS.**
 - Clone or download the repo
 - `yarn` to install dependencies
@@ -95,8 +98,7 @@ A few of the things you can do with ChromApp:
 
 Please take a look at the [contributing guidelines](./CONTRIBUTING.md) for a detailed process on how to build your application as well as troubleshooting information.
 
-**Development Keys**: The `CLIENT_ID` and `CLIENT_SECRET` in `api/index.js` are for development purposes and do not represent the actual application keys. Feel free to use them or use a new set of keys by creating an [OAuth application](https://github.com/settings/applications/new) of your own. Set the "Authorization callback URL" to `gitpoint://welcome`.
-
+**API Keys**: 
 
 
 ## Acknowledgments
