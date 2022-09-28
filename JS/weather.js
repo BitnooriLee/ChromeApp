@@ -1,22 +1,53 @@
-const API_KEY = "PUT YOUR API KEY HERE";
+const API_KEY = "YOUR API KEY HERE";
+const WEATHER_API = "https://api.openweathermap.org/data/2.5/weather?";
 
+const weather = document.querySelector(".js-weather .weather__text");
 
-function onGeoSuccess(position) {
-    const lat = position.coords.latitude;
-    const lon = position.coords.longitude;
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
-    fetch(url)
+function getWeather(coords) {
+  fetch(
+    `${WEATHER_API}lat=${coords.lat}&lon=${
+      coords.lng
+    }&appid=${API_KEY}&units=metric`
+  )
     .then(response => response.json())
-    .then(data => {
-        const weather = document.querySelector("#weather span:first-child");
-        const city = document.querySelector("#weather span:last-child");
-        city.innerText = data.name;
-        weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+    .then(json => {
+      const name = json.name;
+      const temperature = json.main.temp;
+      weather.innerHTML = `${Math.floor(temperature)}° @ ${name}`;
     });
 }
-function onGeoError() {
-    alert("Can't find you. Sorry for the weather info is missing 🥲");
+
+function handleGeoSuccess(position) {
+  const lat = position.coords.latitude;
+  const lng = position.coords.longitude;
+  const coords = {
+    lat,
+    lng
+  };
+  localStorage.setItem("coords", JSON.stringify(coords));
+  getWeather(coords);
 }
 
-navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
+function handleGeoFailure() {
+  console.log("no location");
+}
 
+function loadWeather() {
+  const currentCoords = localStorage.getItem("coords");
+  if (currentCoords !== null) {
+    const parsedCoords = JSON.parse(currentCoords);
+    getWeather(parsedCoords);
+    return;
+  } else {
+    navigator.geolocation.getCurrentPosition(
+      handleGeoSuccess,
+      handleGeoFailure
+    );
+  }
+}
+
+function init() {
+  loadWeather();
+}
+
+init();
