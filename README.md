@@ -17,8 +17,8 @@
 
 - [Introduction](#introduction)
 - [Features](#features)
-- [Feedback](#feedback)
-- [Contributors](#contributors)
+- [What I've learned from this Project](#what-I've-learned-from-this-Project)
+- [Packages](#packages)
 - [Build Process](#build-process)
 
 - [Acknowledgments](#acknowledgments)
@@ -86,21 +86,15 @@ A few of the things you can do with ChromApp:
 
 ## Build Process
 
-- Please take a look at for access Weather API. you can get the API Key here. 
-
-
-- Follow the [React Native Guide](https://facebook.github.io/react-native/docs/getting-started.html) for getting started building a project with native code. **A Mac is required if you wish to develop for iOS.**
-- Clone or download the repo
-- `yarn` to install dependencies
-- `yarn run link` to link react-native dependencies
-- `yarn start:ios` to start the packager and run the app in the iOS simulator (`yarn start:ios:logger` will boot the application with [redux-logger](<https://github.com/evgenyrodionov/redux-logger>))
-- `yarn start:android` to start the packager and run the app in the the Android device/emulator (`yarn start:android:logger` will boot the application with [redux-logger](https://github.com/evgenyrodionov/redux-logger))
-
-Please take a look at the [contributing guidelines](./CONTRIBUTING.md) for a detailed process on how to build your application as well as troubleshooting information.
+- Please take a look at [weather.js](https://github.com/BitnooriLee/ChromeApp/blob/main/JS/weather.js) and add your API Key. 
 
 **API Keys**: 
+
+You can get your onw API key here [Open Weather API](https://openweathermap.org/api) for free! 
+
+
 
 
 ## Acknowledgments
 
-Thanks to [JetBrains](https://www.jetbrains.com) for supporting us with a [free Open Source License](https://www.jetbrains.com/buy/opensource).
+Thanks to [NomadCoders](https://nomadcoders.co/) for providing free lectures.
